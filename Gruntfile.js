@@ -140,6 +140,7 @@ module.exports = function (grunt) {
       customize: {
         // NOTE: This src list is duplicated in footer.html; if making changes here, be sure to update the other copy too.
         src: [
+          'docs/assets/js/vendor/autoprefixer.js',
           'docs/assets/js/vendor/less.min.js',
           'docs/assets/js/vendor/jszip.min.js',
           'docs/assets/js/vendor/uglify.min.js',
