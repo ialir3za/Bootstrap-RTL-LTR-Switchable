@@ -42,6 +42,12 @@
   }
 
   Carousel.prototype.keydown = function (e) {
+    var tagName = e.target.tagName.toUpperCase()
+    switch (tagName) {
+      case    'INPUT': return
+      case 'TEXTAREA': return
+      default: // continue processing event
+    }
     switch (e.which) {
       case 37: this.prev(); break
       case 39: this.next(); break
