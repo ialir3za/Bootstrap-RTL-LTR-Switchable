@@ -72,7 +72,10 @@
   }
 }
 .calc-grid-column(@index, @class, @type) when (@type = offset) {
-  .col-@{class}-offset-@{index} {
+  .col-@{class}-offset-@{index}  when(@langDir = rtl) {
+    margin-right: percentage((@index / @grid-columns));
+  }
+  .col-@{class}-offset-@{index}  when(@langDir = ltr) {
     margin-left: percentage((@index / @grid-columns));
   }
 }
